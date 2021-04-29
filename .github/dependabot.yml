@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.eclipse.jetty:jetty-maven-plugin
+    versions:
+    - 11.0.0
+    - 11.0.1
+  - dependency-name: org.json:json
+    versions:
+    - "20201115"
+  - dependency-name: org.apache.commons:commons-lang3
+    versions:
+    - "3.11"
